@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- RCTG SECV3123-02 -->
+<!-- GROUP MEMBERS:  ANATASYA HUMAIRA (A20EC0261) 
+                     LOW CHEW SIM (A21EC3016)-->
+<!-- ASSIGNMENT 2 : Features Tracking for Web-based AR Application  -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+  <title>Camera</title>
+</head>
+
+<body>
+<!--
+  <div id="container">
+    <video autoplay="true" id="videoElement">
+
+    </video>
+  </div>
+  <script>
+    var video = document.querySelector("#videoElement");
+
+    if (navigator.mediaDevices.getUserMedia) {
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function (stream) {
+          video.srcObject = stream;
+        })
+        .catch(function (err0r) {
+          console.log("Something went wrong!");
+        });
+    }
+  </script>
+-->
+
+  <a-scene embedded arjs="sourceType: webcam;">
+ <!-- <a-box position="0 0.5 0" material="opacity: 0.5;"></a-box> -->
+  <a-entity gltf-model="https://cdn.glitch.global/cb1fc376-17d6-4c7a-b397-403ab2d3707e/bugs_bunny2.glb?v=1711633603068" scale="0.01 0.01 0.01"></a-entity>
+  <a-animation attribute="rotation" to="0 360 0" dur="9000" repeat="indefinite" easing="linear"></a-animation> 
+  <a-marker-camera type="pattern" url="https://cdn.glitch.global/d8cf7916-55cf-481e-b2ce-8cc56c51fcfc/pattern-field.patt?v=1711712215138"></a-marker-camera>
+  <a-marker-camera type="pattern" url="https://cdn.glitch.global/d8cf7916-55cf-481e-b2ce-8cc56c51fcfc/pattern-ForestAnimated.patt?v=1711715650852"></a-marker-camera>
+  <a-marker-camera type="pattern" url="https://cdn.glitch.global/d8cf7916-55cf-481e-b2ce-8cc56c51fcfc/pattern-forest.patt?v=1711723165038"></a-marker-camera>
+</a-scene>
+
+</body>
+
+</html>

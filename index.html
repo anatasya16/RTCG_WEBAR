@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- RCTG SECV3123-02 -->
+<!-- GROUP MEMBERS:  ANATASYA HUMAIRA (A20EC0261) 
+                     LOW CHEW SIM (A21EC3016)-->
+<!-- ASSIGNMENT 2 : Features Tracking for Web-based AR Application  -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,  shrink-to-fit=no">
+  <!-- Title -->
+  <title>Feature Detection</title>
+  <!-- Link -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/nice-select.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/icofont.css">
+  <link rel="stylesheet" href="css/slicknav.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- MAIN FEATURES -->
+  <div class="slider" style="height: 250px; background-color: black;">
+    <p class="get-quote" style="color: white; text-align:center; padding: 80px 0px 20px 0px; font-size: 30px;" >
+        Features Tracking for Web-based AR Application </p>
+    <div style="display: flex; align-items: center; justify-content: center; padding: 0%;">
+        <div style="display: flex; justify-content: space-between; width: 400px; align-items: center; justify-content: center;">
+            <div class="get-quote">
+                <a href="camera.html" class="btn" style="width: 150px; border-radius: 200px;">Camera</a>
+            </div>
+           <!--<div class="get-quote">
+                <a href="saveImage.html" class="btn" style="width: 150px; border-radius: 200px;">Save Image</a>
+           </div> -->
+        </div>
+    </div>
+</div>
+<section class="schedule"  style=" padding: 80px 0px 0px 0px;">
+<div class="container" style="justify-content: center; display: flex;">
+    <div class="schedule-inner" style="justify-content: center; display: flex; width: 1500px;">
+        <div class="row" style="justify-content: center; display: flex; width: 1300px;">
+            <div class="col-lg-4 col-md-6 col-12 ">
+                <div class="single-schedule first">
+                    <div class="inner">
+                        <div class="single-content">
+                          <!-- INSERT CANVAS 1 -->
+                          <canvas id="panel1" style="width: 100%; height: 100%;"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="single-schedule middle">
+                    <div class="inner">
+                        <div class="single-content">
+                          <!-- INSERT CANVAS 2 -->
+                          <canvas id="panel2" style="width: 100%; height: 100%;"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-12">
+                <div class="single-schedule last">
+                    <div class="inner">
+                        <div class="single-content">
+                          <!-- INSERT CANVAS 3 -->
+                          <canvas id="panel3" style="width: 100%; height: 100%;"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!--BUTTONS -->
+<div style="height: 10em; display: flex; align-items: center; justify-content: center;">
+<div style="display: flex; justify-content: space-between; width: 700px;">
+    <input type="file" multiple="false" accept="image/*" id="finput" onchange="uploadImage()">
+    <input style="width: 150px; margin-right: 30px;" type="button" value="Grayscale" onclick="convertGrayscale()">
+    <input style="width: 190px; margin-right: 30px;" type="button" value="Feature Detection" onclick="featureDetection()">
+    <input style="width: 150px;" type="button" value="Save" onclick="download()">
+</div>
+</div>
+
+  <!-- SCRIPT -->
+  <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+  <script src="../src/tracking.js"></script>
+  <script src="../build/tracking.js"></script>
+  <script src="../build/tracking-min.js"></script>
+  <script src="../node_modules/dat.gui/build/dat.gui.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
